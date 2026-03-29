@@ -1,6 +1,6 @@
 # Fastapi Skeleton
 
-A secure python fastapi development setup.
+A secure Python FastAPI development setup.
 
 ## Quick start
 
@@ -12,14 +12,14 @@ A secure python fastapi development setup.
 docker compose up -d; docker compose logs -f;
 ```
 
-3. Visit the following urls to verify the working
+3. Visit the following URLs to verify the working
 
 ```bash
 http://127.0.0.1:8000/
 http://127.0.0.1:8000/docs/
 ```
 
-### if this is your first time to start the container than execute below steps as well.
+### if this is your first time starting the container, then execute the steps below as well.
 
 4. Attach to the container (add the correct container name)
 
@@ -27,7 +27,7 @@ http://127.0.0.1:8000/docs/
 docker exec -it fastapi-dev /bin/bash
 ```
 
-5. Correct the `venv` folder permission by executing the follow commands.
+5. Correct the `venv` folder permission by executing the following commands.
 
 ```bash
 chown -R 1000:1000 ~/.cache/pip
@@ -42,15 +42,15 @@ chown -R 1000:1000 /opt/venv/
 docker compose down
 ```
 
-8. Edit the `docker-compose.yaml` file. Find the line `#user: "${UID}:${GID}"` and remove the `#` from the begining. Save the file.
+8. Edit the `docker-compose.yaml` file. Find the line `#user: "${UID}:${GID}"` and remove the `#` from the beginning. Save the file.
 
-9. Start the container. Rhis is your secure container for python based fastapi development.
+9. Start the container. This is your secure container for Python-based FastAPI development.
 
 ```bash
 docker compose up -d; docker compose logs -f;
 ```
 
-10. To install any additional pip packages than execute the `pip install` command as usual. Example
+10. To install any additional pip packages, execute the `pip install` command as usual. Example
 
 ```bash
 docker exec -it fastapi-dev pip install typer
@@ -64,13 +64,13 @@ docker exec -it fastapi-dev pip install typer
 docker compose up -d;
 ```
 
-2. Freez the requirment file
+2. Freeze the requirement file
 
 ```bash
-docker exec -it fastapi-dev pip freeze > /app/requirements.txt
+docker exec -it fastapi-dev /bin/sh -c "pip freeze > /app/requirements.txt"
 ```
 
-3. Stop the container with delete volume flag
+3. Stop the container with the delete volume flag
 ```bash
 docker compose down -v
 ```
@@ -81,4 +81,4 @@ docker compose down -v
 docker compose up -d; docker compose logs -f;
 ```
 
-5. Follow all the steps again from `step no 4` from `Quick Start` section.
+5. Follow all the steps again from `step no 4` from the `Quick Start` section.
